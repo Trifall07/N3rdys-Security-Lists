@@ -1,4 +1,5 @@
-GodMode (useful Control Panel settings in one place): Create new folder on Desktop with name: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+GodMode (useful Control Panel settings in one place): Create new folder on Desktop with name: 
+GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
 
 Search for “Local Security Policy”
 
