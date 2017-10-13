@@ -1,0 +1,120 @@
+GodMode (useful Control Panel settings in one place): Create new folder on Desktop with name: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+Search for “Local Security Policy”
+
+Right-click Windows button > Computer Management
+
+Local Security Policy > Account Policies > Password Policy
+- Password History 5 Days
+- Maximum Password age 30-90 days
+- Minimum Password age 5 days
+- Minimum Password Length 8 char.
+- Password Complexity Enabled
+- Reverse Encryptions Disabled
+
+Local Security Policy > Account Policies > Account Lockout Policy
+- Account Lockout Duration 30 minutes
+- Account Lockout Threshold 3
+- Reset account lockout counter 30 minutes
+
+Local Security Policy > Local Policies > Audit Policy
+- Audit Logon Events Failure
+- Audit Account Management Success
+- Audit Directory Service ND
+- Audit logon Events Failure
+- Audit Objects Access ND
+- Audit Policy Change Success
+- Audit Privilege use success failure
+- Audit Process tracking Success Failure
+- Audit System Events failure 
+
+Do NOT edit Firewall with Local Security Policy
+Search for “Windows Firewall with Advanced Security”
+- Turn ON
+
+Computer Management > Local Users and Groups > Users
+- Double-click username for settings
+- Disable Guest and Administrator
+
+Search “Services”
+Disable Services:
+- Remote Desktop
+- Internet Connection Sharing
+- Remote Desktop Services UserMode 
+- Remote Registry
+- Remote Desktop Configuration
+- SSDP Discovery
+- UPnP Device Host
+- Remote Desktop
+- Other “Remote” services except Remote procedure Call (unless otherwise specified)
+Look up any without a description to remove
+
+Reset the Host File:
+Located in- %systemroot% \system32\drivers\etc
+Rename hosts to hosts.bak
+Create new hosts with the following;
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+# localhost name resolution is handle within DNS itself.
+#       127.0.0.1       localhost
+#       ::1             localhost
+
+Look at connections on PC: netstat -a
+Block Ports:
+- FTP (20/21)
+- SSH (22)
+- TelNet (23)
+- RPC (135)
+- SNMP (161)
+- LDAP (389)
+- RDP (3389)
+- Direct Connect [PTP] (411/412)
+
+Turn on automatic updates and update computer (during lunch)
+
+Search for “View Advanced System Settings”
+- Go to Remote tab
+- Uncheck Allow Remote Assistance connections to this Computer
+- Select Don’t allow remote connections to this computer
+
+Search for “Change User Account Control settings” and set to the highest security setting
+
+Remove any unnecessary programs
+
+Remove unnecessary Windows Features
+
+Windows File Explorer > View Tab > Options > View Tab
+- Show hidden files
+- Do not hide protected system files
+- Do not hide extensions
+
+Remove unnecessary shared
+
+Look for prohibited files
+- *.mp3 *.png *.jpg *.mov etc.
+- “Readme” will help show hacking tools
+
+Check the Windows Task Scheduler
+
+Install MalwareBytes
+
+Update Windows Defender
+
+Update Browsers
+
+Convert FAT file systems to NTFS
