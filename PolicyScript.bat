@@ -10,7 +10,7 @@ pause
 exit
 )
 
-title Policy Scripts - Jerren Trifan
+title Policy Scripts - Jerren Trifan - Version 1.0
 color 1E
 
 set logpath=C:\Users\%USERNAME%\Desktop\ScriptLog.txt
@@ -438,7 +438,7 @@ echo DNS Flushed and Host file cleared.
 if %runall%==true (
 	set runall=false
 	echo.
-	@echo 13) Run All Scripts has finished. >> %logpath%
+	@echo "13) Run All Scripts has finished." >> %logpath%
 	echo Run-all scripts has finished.	
 	echo.
 	pause
@@ -450,77 +450,115 @@ goto :Options
 :WindowsFeatures
 cls
 echo.
-@echo 12) Attempting to disable unneeded Windows Features. >> %logpath%
+@echo "12) Attempting to disable unneeded Windows Features." >> %logpath%
 echo Attempting to disable unneeded Windows Features.
 
 REM online list of windows features to disable.
-
+title Policy Scripts - Jerren Trifan - Windows Features [0/51]
 dism /online /disable-feature /featurename:IIS-WebServerRole
+title Policy Scripts - Jerren Trifan - Windows Features [1/51]
 dism /online /disable-feature /featurename:IIS-WebServer
-dism /online /disable-feature /featurename:IIS-CommonHttpFeatures 
+title Policy Scripts - Jerren Trifan - Windows Features [2/51]
+dism /online /disable-feature /featurename:IIS-CommonHttpFeatures
+title Policy Scripts - Jerren Trifan - Windows Features [3/51] 
 dism /online /disable-feature /featurename:IIS-HttpErrors 
-
+title Policy Scripts - Jerren Trifan - Windows Features [4/51]
 dism /online /disable-feature /featurename:IIS-HttpRedirect 
+title Policy Scripts - Jerren Trifan - Windows Features [5/51]
 dism /online /disable-feature /featurename:IIS-ApplicationDevelopment
+title Policy Scripts - Jerren Trifan - Windows Features [6/51]
 dism /online /disable-feature /featurename:IIS-NetFxExtensibility
+title Policy Scripts - Jerren Trifan - Windows Features [7/51]
 dism /online /disable-feature /featurename:IIS-NetFxExtensibility45
-
+title Policy Scripts - Jerren Trifan - Windows Features [8/51]
 dism /online /disable-feature /featurename:IIS-HealthAndDiagnostics 
+title Policy Scripts - Jerren Trifan - Windows Features [9/51]
 dism /online /disable-feature /featurename:IIS-HttpLogging 
+title Policy Scripts - Jerren Trifan - Windows Features [10/51]
 dism /online /disable-feature /featurename:IIS-LoggingLibraries 
+title Policy Scripts - Jerren Trifan - Windows Features [11/51]
 dism /online /disable-feature /featurename:IIS-RequestMonitor 
-
+title Policy Scripts - Jerren Trifan - Windows Features [12/51]
 dism /online /disable-feature /featurename:IIS-HttpTracing 
+title Policy Scripts - Jerren Trifan - Windows Features [13/51]
 dism /online /disable-feature /featurename:IIS-Security 
-dism /online /disable-feature /featurename:IIS-URLAuthorization 
-dism /online /disable-feature /featurename:IIS-RequestFiltering 
-echo 25% Complete
+title Policy Scripts - Jerren Trifan - Windows Features [14/51]
+dism /online /disable-feature /featurename:IIS-URLAuthorization
+title Policy Scripts - Jerren Trifan - Windows Features [15/51] 
+dism /online /disable-feature /featurename:IIS-RequestFiltering
+title Policy Scripts - Jerren Trifan - Windows Features [16/51] 
 dism /online /disable-feature /featurename:IIS-IPSecurity 
+title Policy Scripts - Jerren Trifan - Windows Features [17/51]
 dism /online /disable-feature /featurename:IIS-Performance 
+title Policy Scripts - Jerren Trifan - Windows Features [18/51]
 dism /online /disable-feature /featurename:IIS-HttpCompressionDynamic 
+title Policy Scripts - Jerren Trifan - Windows Features [19/51]
 dism /online /disable-feature /featurename:IIS-WebServerManagementTools 
-
+title Policy Scripts - Jerren Trifan - Windows Features [20/51]
 dism /online /disable-feature /featurename:IIS-ManagementScriptingTools 
+title Policy Scripts - Jerren Trifan - Windows Features [21/51]
 dism /online /disable-feature /featurename:IIS-IIS6ManagementCompatibility 
+title Policy Scripts - Jerren Trifan - Windows Features [22/51]
 dism /online /disable-feature /featurename:IIS-Metabase 
+title Policy Scripts - Jerren Trifan - Windows Features [23/51]
 dism /online /disable-feature /featurename:IIS-HostableWebCore 
-
-dism /online /disable-feature /featurename:IIS-StaticContent 
+title Policy Scripts - Jerren Trifan - Windows Features [24/51]
+dism /online /disable-feature /featurename:IIS-StaticContent
+title Policy Scripts - Jerren Trifan - Windows Features [25/51] 
 dism /online /disable-feature /featurename:IIS-DefaultDocument 
-dism /online /disable-feature /featurename:IIS-DirectoryBrowsing 
+title Policy Scripts - Jerren Trifan - Windows Features [26/51]
+dism /online /disable-feature /featurename:IIS-DirectoryBrowsing
+title Policy Scripts - Jerren Trifan - Windows Features [27/51] 
 dism /online /disable-feature /featurename:IIS-WebDAV 
-
+title Policy Scripts - Jerren Trifan - Windows Features [28/51]
 dism /online /disable-feature /featurename:IIS-WebSockets 
+title Policy Scripts - Jerren Trifan - Windows Features [29/51]
 dism /online /disable-feature /featurename:IIS-ApplicationInit 
+title Policy Scripts - Jerren Trifan - Windows Features [30/51]
 dism /online /disable-feature /featurename:IIS-ASPNET 
+title Policy Scripts - Jerren Trifan - Windows Features [31/51]
 dism /online /disable-feature /featurename:IIS-ASPNET45 
-echo 50% Complete
+title Policy Scripts - Jerren Trifan - Windows Features [32/51]
 dism /online /disable-feature /featurename:IIS-ASP 
+title Policy Scripts - Jerren Trifan - Windows Features [33/51]
 dism /online /disable-feature /featurename:IIS-CGI 
+title Policy Scripts - Jerren Trifan - Windows Features [34/51]
 dism /online /disable-feature /featurename:IIS-ISAPIExtensions 
+title Policy Scripts - Jerren Trifan - Windows Features [35/51]
 dism /online /disable-feature /featurename:IIS-ISAPIFilter 
-
-dism /online /disable-feature /featurename:IIS-ServerSideIncludes 
+title Policy Scripts - Jerren Trifan - Windows Features [36/51]
+dism /online /disable-feature /featurename:IIS-ServerSideIncludes
+title Policy Scripts - Jerren Trifan - Windows Features [37/51] 
 dism /online /disable-feature /featurename:IIS-CustomLogging 
-dism /online /disable-feature /featurename:IIS-BasicAuthentication 
-dism /online /disable-feature /featurename:IIS-HttpCompressionStatic 
-echo 75% Complete
+title Policy Scripts - Jerren Trifan - Windows Features [38/51]
+dism /online /disable-feature /featurename:IIS-BasicAuthentication
+title Policy Scripts - Jerren Trifan - Windows Features [39/51] 
+dism /online /disable-feature /featurename:IIS-HttpCompressionStatic
+title Policy Scripts - Jerren Trifan - Windows Features [40/51] 
 dism /online /disable-feature /featurename:IIS-ManagementConsole 
-dism /online /disable-feature /featurename:IIS-ManagementService 
-dism /online /disable-feature /featurename:IIS-WMICompatibility 
+title Policy Scripts - Jerren Trifan - Windows Features [41/51]
+dism /online /disable-feature /featurename:IIS-ManagementService
+title Policy Scripts - Jerren Trifan - Windows Features [42/51] 
+dism /online /disable-feature /featurename:IIS-WMICompatibility
+title Policy Scripts - Jerren Trifan - Windows Features [43/51] 
 dism /online /disable-feature /featurename:IIS-LegacyScripts 
-
+title Policy Scripts - Jerren Trifan - Windows Features [44/51]
 dism /online /disable-feature /featurename:IIS-LegacySnapIn 
+title Policy Scripts - Jerren Trifan - Windows Features [45/51]
 dism /online /disable-feature /featurename:IIS-FTPServer 
+title Policy Scripts - Jerren Trifan - Windows Features [46/51]
 dism /online /disable-feature /featurename:IIS-FTPSvc 
+title Policy Scripts - Jerren Trifan - Windows Features [47/51]
 dism /online /disable-feature /featurename:IIS-FTPExtensibility 
-
+title Policy Scripts - Jerren Trifan - Windows Features [48/51]
 dism /online /disable-feature /featurename:TFTP 
+title Policy Scripts - Jerren Trifan - Windows Features [49/51]
 dism /online /disable-feature /featurename:TelnetClient 
+title Policy Scripts - Jerren Trifan - Windows Features [50/51]
 dism /online /disable-feature /featurename:TelnetServer 
+title Policy Scripts - Jerren Trifan - Windows Features [51/51]
 
-echo 100% Complete
-@echo 12) Disabled unneeded Windows Features. >> %logpath%
+@echo "12) Disabled unneeded Windows Features." >> %logpath%
 echo Disabled unneeded Windows Features.
 echo.
 pause

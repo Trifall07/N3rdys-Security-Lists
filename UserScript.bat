@@ -10,7 +10,7 @@ pause
 exit
 )
 
-title User Scripts - Jerren Trifan
+title User Scripts - Jerren Trifan - Version 1.0
 color 1E
 
 set logpath=C:\Users\%USERNAME%\Desktop\ScriptLog.txt
